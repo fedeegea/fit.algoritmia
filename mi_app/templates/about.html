@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Fit Algoritmia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center mb-5">
+        <h1 id="titulo" class="text-center">Fit Algoritmia</h1>
+        <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Fit Algoritmia" class="logo">
+
+        <!-- Menú hamburguesa -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('como_realizar') }}">Cómo realizar los ejercicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-5">
+        <h2 class="text-light text-center mb-4">Acerca de Fit Algoritmia</h2>
+        <p class="text-light">Aquí puedes incluir información sobre la aplicación Fit Algoritmia, su propósito, el equipo detrás del desarrollo, etc.</p>
+    </section>
+
+    <footer class="footer mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Fit Algoritmia. Todos los derechos reservados.</p>
+            <p>
+                <a href="{{ url_for('index') }}" class="text-light">Inicio</a> | 
+                <a href="{{ url_for('login') }}" class="text-light">Iniciar sesión</a> | 
+                <a href="{{ url_for('como_realizar') }}" class="text-light">Cómo realizar los ejercicios</a> | 
+                <a href="{{ url_for('about') }}" class="text-light">Acerca de</a>
+            </p>
+            <p>
+                Desarrollado por <a href="https://api.whatsapp.com/send?phone=1136953206" class="text-light">Federico Egea</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

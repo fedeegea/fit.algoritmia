@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Algoritmia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center mb-5">
+        <h1 id="titulo" class="text-center">Fit Algoritmia</h1>
+        <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Fit Algoritmia" class="logo">
+    </header>
+
+    <!-- Nueva sección con imagen de fondo -->
+    <section class="section-bg">
+        <h2 class="text-light text-center mb-4">Programa de Rutinas Personalizadas</h2>
+        <div class="explanatory-text">
+            <p>Bienvenido a Fit Algoritmia, tu plataforma para crear rutinas de entrenamiento personalizadas según tu nivel de dificultad. Seleccioná tu nivel de <br> experiencia y obtén una rutina diseñada específicamente para ti. ¡Empieza hoy mismo y alcanza tus objetivos de fitness!</p>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <h2 class="text-light text-center mb-4">Escoger dificultad</h2>
+        
+        <div class="d-flex justify-content-center mb-4">
+            <button class="btn btn-primary mr-2" data-dificultad="principiante">Principiante</button>
+            <button class="btn btn-success mr-2" data-dificultad="intermedio">Intermedio</button>
+            <button class="btn btn-danger" data-dificultad="avanzado">Avanzado</button>
+        </div>
+
+        <div class="mt-4">
+            <h2 class="text-light">Rutina Generada:</h2>
+            <ul id="rutina-list" class="list-group mt-3"></ul>
+        </div>
+
+        <div class="mt-4">
+            <h2 class="text-light">Eliminar Ejercicio:</h2>
+            <div class="form-group">
+                <label for="ejercicio-id" class="text-light">Número de Ejercicio a Eliminar:</label>
+                <input type="number" id="ejercicio-id" class="form-control" min="1">
+                <button id="eliminar-btn" class="btn btn-warning mt-2 disabled">Eliminar</button>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div id="stats" class="text-light"></div>
+        </div>
+    </div>
+    <footer class="footer mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Fit Algoritmia. Todos los derechos reservados.</p>
+            <p>
+                <a href="/acerca-de" class="text-light">Acerca de</a> | 
+                <a href="http://127.0.0.1:5000/" class="text-light">Fit Algoritmia</a>
+            </p>
+            <p>
+                Desarrollado por <a href="https://api.whatsapp.com/send?phone=1136953206" class="text-light">Federico Egea</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
